@@ -1,15 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {HotelList} from '../../../interfaces/interface';
 
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css']
 })
-export class ItemComponent implements OnInit {
+export class ItemComponent implements OnInit, OnChanges {
 
-  constructor() { }
+  @Input()
+  public hotel: HotelList;
+
+  @Input()
+  public selectedHotel: HotelList;
+
+  public isComponentSelected = false;
+
+  public class: string;
+
+  public pointer: string;
+
+  private readonly selected: string = 'selected';
+
+  private readonly activePointer: string = 'active';
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    let hotel: HotelList = changes.selectedHotel.currentValue;
+    this.isComponentSelected = hotel.id === this.hotel.id;
+    this.class = this.isComponentSelected ? this.selected : '';
+    this.pointer = !this.isComponentSelected ? this.activePointer : '';
+  }
+
 }
+

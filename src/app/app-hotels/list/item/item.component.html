@@ -1,1 +1,13 @@
-<p>item works!</p>
+<div class="activity-desc" ngClass="{{pointer}}">
+  <h5 ngClass="{{class}}">{{ hotel.title }}</h5>
+  <p>{{ hotel.address }}</p>
+  <p>{{ hotel.description }}</p>
+  <h6>Tel: {{ hotel.phone }}</h6>
+</div>
+<div class="activity-img">
+  <ul >
+    <li *ngFor="let image of hotel.photos; index as i;">
+      <img src='{{ image }}' alt=""/>
+    </li>
+  </ul>
+</div>
