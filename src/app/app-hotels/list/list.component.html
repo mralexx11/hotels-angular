@@ -15,7 +15,7 @@
       <div class="activity_box">
         <div class="scrollbar" id="style-2">
           <div class="activity-row" *ngFor="let hotel of hotels; index as i;">
-            <app-hotel-item [hotel]="hotel" [selectedHotel]="selectedHotel" (click)="selectHotel(hotel.id)"></app-hotel-item>
+            <app-item [hotel]="hotel" [selectedHotel]="selectedHotel" (click)="selectHotel(hotel.id)"></app-item>
             <div class="clear"></div>
           </div>
         </div>
