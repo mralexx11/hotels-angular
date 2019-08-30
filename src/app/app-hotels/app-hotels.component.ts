@@ -63,9 +63,9 @@ export class AppHotelsComponent implements OnInit {
     },
     {
       id: 2,
-      title: 'Hotel name',
+      title: 'Hotel Grand',
       address: 'Orlando',
-      description: 'Lorem ipson0',
+      description: 'Superior',
       phone: '+3242353434',
       picture: '../assets/images/1.jpg',
       photos: [

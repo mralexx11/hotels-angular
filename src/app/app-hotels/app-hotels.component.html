@@ -1,10 +1,10 @@
 <app-header></app-header>
-<div>
+
   <app-list [hotels]="hotels" (updateHotel)="selectHotel($event)" [selectedHotel]="selectedHotel"></app-list>
   <div class="element-right">
-    <app-weather></app-weather>
-    <app-profile></app-profile>
+    <app-weather [selectedHotel]="selectedHotel"></app-weather>
+    <app-profile  [selectedHotel]="selectedHotel"></app-profile>
   </div>
-</div>
+<div class="clear"></div>
 <app-footer></app-footer>
 
