@@ -14,16 +14,6 @@ export class AppHotelsComponent implements OnInit {
 
   public selectedHotel: HotelList;
 
-  public selectHotel(id: number): void {
-    this.selectedHotel = this.getHotelById(id);
-  }
-
-  private getHotelById(id: number): HotelList {
-    return this.hotels.filter((item: HotelList) => {
-      return item.id === id;
-    }).shift();
-  }
-
   public hotels: HotelList[] = [
     {
       id: 0,
@@ -31,10 +21,10 @@ export class AppHotelsComponent implements OnInit {
       address: 'Orlando',
       description: 'Best one!',
       phone: '+3242353434',
-      picture: 'assets/images/1.jpg',
+      picture: '../assets/images/1.jpg',
       photos: [
-        'assets/images/res.jpg',
-        'assets/images/r1.jpg'
+        '../assets/images/res.jpg',
+        '../assets/images/r1.jpg'
       ],
       weather:  {
         temperature: 12,
@@ -44,7 +34,7 @@ export class AppHotelsComponent implements OnInit {
       profile: {
         followers: 112,
         following: 11,
-        photo: 'assets/images/1.jpg'
+        photo: '../assets/images/1.jpg'
       },
       stars: 3
     },
@@ -54,10 +44,10 @@ export class AppHotelsComponent implements OnInit {
       address: 'Kharkov',
       description: 'Five Stars',
       phone: '+3242353434',
-      picture: 'assets/images/2.jpg',
+      picture: '../assets/images/2.jpg',
       photos: [
-        'assets/images/res.jpg',
-        'assets/images/r1.jpg'
+        '../assets/images/res.jpg',
+        '../assets/images/r1.jpg'
       ],
       weather:  {
         temperature: 5,
@@ -67,7 +57,7 @@ export class AppHotelsComponent implements OnInit {
       profile: {
         followers: 12,
         following: 111,
-        photo: 'assets/images/1.jpg'
+        photo: '../assets/images/1.jpg'
       },
       stars: 4
     },
@@ -77,10 +67,10 @@ export class AppHotelsComponent implements OnInit {
       address: 'Orlando',
       description: 'Lorem ipson0',
       phone: '+3242353434',
-      picture: 'assets/images/1.jpg',
+      picture: '../assets/images/1.jpg',
       photos: [
-        'assets/images/res.jpg',
-        'assets/images/r1.jpg'
+        '../assets/images/res.jpg',
+        '../assets/images/r1.jpg'
       ],
       weather:  {
         temperature: -2,
@@ -90,11 +80,21 @@ export class AppHotelsComponent implements OnInit {
       profile: {
         followers: 45,
         following: 78,
-        photo: 'assets/images/1.jpg'
+        photo: '../assets/images/1.jpg'
       },
       stars: 5
     }
   ];
+
+  public selectHotel(id: number): void {
+    this.selectedHotel = this.getHotelById(id);
+  }
+
+  private getHotelById(id: number): HotelList {
+    return this.hotels.filter((item: HotelList) => {
+      return item.id === id;
+    }).shift();
+  }
 
   ngOnInit() {
   }
