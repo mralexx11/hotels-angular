@@ -16,6 +16,7 @@ export class ListComponent implements OnInit {
 
   @Output()
   public updateHotel: EventEmitter<number> = new EventEmitter();
+  searchHotel = '';
 
   selectHotel(id: number) {
     this.selectedHotel.id !== id ? this.updateHotel.emit(id) : false;

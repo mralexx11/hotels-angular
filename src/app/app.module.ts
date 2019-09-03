@@ -9,6 +9,8 @@ import { WeatherComponent } from './app-hotels/weather/weather.component';
 import { ProfileComponent } from './app-hotels/profile/profile.component';
 import { FooterComponent } from './app-hotels/footer/footer.component';
 import { HeaderComponent } from './app-hotels/header/header.component';
+import { HotelFilterPipe } from './pipes/hotel-filter.pipe';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,10 +21,12 @@ import { HeaderComponent } from './app-hotels/header/header.component';
     WeatherComponent,
     ProfileComponent,
     FooterComponent,
-    HeaderComponent
+    HeaderComponent,
+    HotelFilterPipe
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
