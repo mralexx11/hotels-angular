@@ -19,7 +19,8 @@
 
             <app-item [hotel]="hotel" [selectedHotel]="selectedHotel" (click)="selectHotel(hotel.id)"></app-item>
             <div class="clear"></div>
-            <li style="color: red; background-color: #5fb3f9" *ngIf="hotel.fav">{{hotel.title + ' is added to fav'}}</li>
+            <li style="color: red; background-color: lightsalmon" *ngIf="hotel.fav">{{hotel.title + ' is added to fav'}}</li>
+            <li style="color: red; background-color: lightblue" *ngIf="!hotel.fav">{{hotel.title + ' is not in favorite yet'}}</li>
           </div>
         </div>
       </div>
