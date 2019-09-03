@@ -17,6 +17,7 @@ export class AppHotelsComponent implements OnInit {
   public hotels: HotelList[] = [
     {
       id: 0,
+      fav: false,
       title: 'Universal Cabana',
       address: 'Orlando',
       description: 'Best one!',
@@ -40,6 +41,7 @@ export class AppHotelsComponent implements OnInit {
     },
     {
       id: 1,
+      fav: false,
       title: 'Kharkov plaza',
       address: 'Kharkov',
       description: 'Five Stars',
@@ -63,6 +65,7 @@ export class AppHotelsComponent implements OnInit {
     },
     {
       id: 2,
+      fav: false,
       title: 'Hotel Grand',
       address: 'Orlando',
       description: 'Superior',
@@ -86,6 +89,7 @@ export class AppHotelsComponent implements OnInit {
     },
     {
       id: 3,
+      fav: false,
       title: 'hotel four',
       address: 'Orlando',
       description: 'Superior',
@@ -109,6 +113,7 @@ export class AppHotelsComponent implements OnInit {
     },
     {
       id: 4,
+      fav: false,
       title: 'Hotel Five',
       address: 'Orlando',
       description: 'Superior',
@@ -132,6 +137,7 @@ export class AppHotelsComponent implements OnInit {
     },
     {
       id: 5,
+      fav: false,
       title: 'Hotel Six',
       address: 'Orlando',
       description: 'Superior',

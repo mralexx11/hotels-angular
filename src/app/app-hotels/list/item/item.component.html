@@ -9,5 +9,6 @@
     <li *ngFor="let image of hotel.photos; index as i;">
       <img src='{{ image }}' alt=""/>
     </li>
+    <a class="fav" (click)="toFavorite() ">&#x2665;</a>
   </ul>
 </div>

@@ -1,5 +1,6 @@
 export interface HotelList {
   id: number,
+  fav: boolean,
   title: string,
   address: string,
   description: string,

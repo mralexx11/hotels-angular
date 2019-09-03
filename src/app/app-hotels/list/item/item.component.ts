@@ -1,4 +1,4 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
 import {HotelList} from '../../../interfaces/interface';
 
 @Component({
@@ -6,7 +6,7 @@ import {HotelList} from '../../../interfaces/interface';
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css']
 })
-export class ItemComponent implements OnInit, OnChanges {
+export class ItemComponent implements  OnChanges {
 
   @Input()
   public hotel: HotelList;
@@ -27,8 +27,7 @@ export class ItemComponent implements OnInit, OnChanges {
   constructor() {
   }
 
-  ngOnInit() {
-  }
+
 
   ngOnChanges(changes: SimpleChanges): void {
     let hotel: HotelList = changes.selectedHotel.currentValue;
@@ -37,5 +36,8 @@ export class ItemComponent implements OnInit, OnChanges {
     this.pointer = !this.isComponentSelected ? this.activePointer : '';
   }
 
+  toFavorite() {
+    this.hotel.fav = !this.hotel.fav;
+  }
 }
 
