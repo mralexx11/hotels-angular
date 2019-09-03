@@ -6,7 +6,7 @@ import {HotelList} from '../../interfaces/interface';
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent implements OnInit {
+export class ListComponent {
 
   @Input()
   public hotels: HotelList[];
@@ -18,13 +18,8 @@ export class ListComponent implements OnInit {
   public updateHotel: EventEmitter<number> = new EventEmitter();
   searchHotel = '';
 
+
   selectHotel(id: number) {
     this.selectedHotel.id !== id ? this.updateHotel.emit(id) : false;
   }
-
-  constructor() { }
-
-  ngOnInit() {
-  }
-
 }

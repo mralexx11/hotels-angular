@@ -16,5 +16,5 @@ export interface HotelList {
     following: number,
     photo: string
   },
-  stars: number
+  stars: number;
 }

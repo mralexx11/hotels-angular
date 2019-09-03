@@ -83,6 +83,75 @@ export class AppHotelsComponent implements OnInit {
         photo: '../assets/images/1.jpg'
       },
       stars: 5
+    },
+    {
+      id: 3,
+      title: 'hotel four',
+      address: 'Orlando',
+      description: 'Superior',
+      phone: '+3242353434',
+      picture: '../assets/images/1.jpg',
+      photos: [
+        '../assets/images/res.jpg',
+        '../assets/images/r1.jpg'
+      ],
+      weather:  {
+        temperature: -2,
+        wind: 2,
+        icon: 'cloud'
+      },
+      profile: {
+        followers: 45,
+        following: 78,
+        photo: '../assets/images/1.jpg'
+      },
+      stars: 4
+    },
+    {
+      id: 4,
+      title: 'Hotel Five',
+      address: 'Orlando',
+      description: 'Superior',
+      phone: '+3242353434',
+      picture: '../assets/images/1.jpg',
+      photos: [
+        '../assets/images/res.jpg',
+        '../assets/images/r1.jpg'
+      ],
+      weather:  {
+        temperature: -2,
+        wind: 2,
+        icon: 'cloud'
+      },
+      profile: {
+        followers: 45,
+        following: 78,
+        photo: '../assets/images/1.jpg'
+      },
+      stars: 5
+    },
+    {
+      id: 5,
+      title: 'Hotel Six',
+      address: 'Orlando',
+      description: 'Superior',
+      phone: '+3242353434',
+      picture: '../assets/images/1.jpg',
+      photos: [
+        '../assets/images/res.jpg',
+        '../assets/images/r1.jpg'
+      ],
+      weather:  {
+        temperature: -2,
+        wind: 2,
+        icon: 'cloud'
+      },
+      profile: {
+        followers: 45,
+        following: 78,
+        photo: '../assets/images/1.jpg'
+      },
+      stars: 5
     }
   ];
 
