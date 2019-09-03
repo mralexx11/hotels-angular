@@ -10,7 +10,10 @@ export class HotelFilterPipe implements PipeTransform {
     if (HotelList.length === 0 || searchStr === '') {
       return HotelList;
     }
-    return HotelList.filter(hotel => (hotel[fieldName] + hotel[fieldDesc] + hotel[fieldStar]).toLowerCase().indexOf(searchStr.toLowerCase()) !== -1);
+    return HotelList
+      .filter(hotel => (hotel[fieldName] + hotel[fieldDesc] + hotel[fieldStar])
+        .toLowerCase()
+        .indexOf(searchStr.toLowerCase()) !== -1);
   }
 
 }

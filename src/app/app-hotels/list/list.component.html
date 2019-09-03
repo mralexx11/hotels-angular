@@ -11,11 +11,11 @@
     </div>
     <div class="village">
       <h3>Righteous indignation & like</h3>
-      <input type="text" [(ngModel)]="searchHotel">
+      <input placeholder="Search your hotel" type="text" [(ngModel)]="searchHotel">
       <span class="line"> </span>
       <div class="activity_box">
         <div class="scrollbar" id="style-2">
-          <div class="activity-row" *ngFor="let hotel of hotels | hotelFilter:searchHotel:'tag':'description':'stars'; index as i;">
+          <div class="activity-row" *ngFor="let hotel of hotels | hotelFilter:searchHotel:'title':'description':'stars'; index as i;">
             <app-item [hotel]="hotel" [selectedHotel]="selectedHotel" (click)="selectHotel(hotel.id)"></app-item>
             <div class="clear"></div>
           </div>
