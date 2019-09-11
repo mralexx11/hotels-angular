@@ -1,12 +1,13 @@
-import {Component, Input, OnChanges, SimpleChanges} from '@angular/core';
-import {HotelList} from '../../../interfaces/interface';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { HotelList } from '../../../interfaces/interface';
+import { HotelsService} from '../../hotels.service';
 
 @Component({
   selector: 'app-item',
   templateUrl: './item.component.html',
   styleUrls: ['./item.component.css']
 })
-export class ItemComponent implements  OnChanges {
+export class ItemComponent implements  OnChanges, OnInit {
 
   @Input()
   public hotel: HotelList;
@@ -14,7 +15,7 @@ export class ItemComponent implements  OnChanges {
   @Input()
   public selectedHotel: HotelList;
 
-  public isComponentSelected = false;
+  public isComponentSelected: boolean = false;
 
   public class: string;
 
@@ -24,12 +25,11 @@ export class ItemComponent implements  OnChanges {
 
   private readonly activePointer: string = 'active';
 
-  constructor() {
+  public ngOnInit(): void {
+
   }
 
-
-
-  ngOnChanges(changes: SimpleChanges): void {
+  public ngOnChanges(changes: SimpleChanges): void {
     let hotel: HotelList = changes.selectedHotel.currentValue;
     this.isComponentSelected = hotel.id === this.hotel.id;
     this.class = this.isComponentSelected ? this.selected : '';

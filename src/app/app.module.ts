@@ -10,7 +10,8 @@ import { ProfileComponent } from './app-hotels/profile/profile.component';
 import { FooterComponent } from './app-hotels/footer/footer.component';
 import { HeaderComponent } from './app-hotels/header/header.component';
 import { HotelFilterPipe } from './pipes/hotel-filter.pipe';
-import {FormsModule} from '@angular/forms';
+import { FormsModule } from '@angular/forms';
+import { HotelsService } from './app-hotels/hotels.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import {FormsModule} from '@angular/forms';
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [HotelsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,25 +1,34 @@
-import {Component, Input, Output, EventEmitter, OnInit} from '@angular/core';
-import {HotelList} from '../../interfaces/interface';
+import { Component, OnInit } from '@angular/core';
+import { HotelList } from '../../interfaces/interface';
+import { HotelsService } from '../hotels.service';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
   styleUrls: ['./list.component.css']
 })
-export class ListComponent {
+export class ListComponent implements OnInit {
 
-  @Input()
+  // @Input()
   public hotels: HotelList[];
 
-  @Input()
+  // @Input()
   public selectedHotel: HotelList;
+  //
+  // @Output()
+  // public updateHotel: EventEmitter<number> = new EventEmitter();
+  public searchHotel: string = '';
 
-  @Output()
-  public updateHotel: EventEmitter<number> = new EventEmitter();
-  searchHotel = '';
+  public constructor (private service: HotelsService) {
+  }
 
+  //
+  // selectHotel(id: number) {
+  //   this.selectedHotel.id !== id ? this.updateHotel.emit(id) : false;
+  // }
 
-  selectHotel(id: number) {
-    this.selectedHotel.id !== id ? this.updateHotel.emit(id) : false;
+  ngOnInit(): void {
+    this.hotels = this.service.hotels;
+    this.selectedHotel = this.service.selectedHotel;
   }
 }
