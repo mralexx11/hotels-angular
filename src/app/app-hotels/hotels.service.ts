@@ -1,4 +1,10 @@
 import { HotelList } from '../interfaces/interface';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+
+@Injectable ({
+  providedIn: 'root'
+})
 
 export class HotelsService {
   public hotels: HotelList[] = [
@@ -162,5 +168,14 @@ export class HotelsService {
     return this.hotels.filter((item: HotelList) => {
       return item.id === id;
     }).shift();
+  }
+  private getHotels (id: number): Observable {
+    const observ = new Observable(observer => {
+      setTimeout(() => {
+        observer.next(this.hotels);
+      }, 1000);
+      });
+    return observ;
+    })
   }
 }
